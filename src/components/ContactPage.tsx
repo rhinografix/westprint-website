@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState, FormEvent } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
@@ -10,14 +10,14 @@ interface ContactPageProps {
 }
 
 export default function ContactPage({ onNavigate }: ContactPageProps) {
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [submitStatus, setSubmitStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
