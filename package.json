@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Westprint printing company website",
   "engines": {
-    "node": ">=20.0.0"
+    "node": "20.18.0"
   },
   "scripts": {
     "dev": "vite",
