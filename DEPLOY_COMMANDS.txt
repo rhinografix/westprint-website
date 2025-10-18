@@ -5,7 +5,7 @@
 ║  Run these commands in your terminal:                      ║
 ║                                                            ║
 ║  git add .                                                 ║
-║  git commit -m "Fix: Add PostCSS config for Tailwind v4"  ║
+║  git commit -m "Fix: Add @tailwindcss/postcss for v4"     ║
 ║  git push                                                  ║
 ║                                                            ║
 ╠════════════════════════════════════════════════════════════╣
@@ -14,6 +14,7 @@
 ║                                                            ║
 ║  ✅ Added @import "tailwindcss" to both CSS files         ║
 ║  ✅ Created postcss.config.js for Vite                    ║
+║  ✅ Added @tailwindcss/postcss package                    ║
 ║  ✅ Configured Tailwind CSS v4 processing                 ║
 ║                                                            ║
 ╠════════════════════════════════════════════════════════════╣
