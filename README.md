@@ -6,14 +6,15 @@ Professional printing company website for Westprint - Serving Southern Californi
 
 ### 🚨 Build Failed? Fix It Now!
 
-**Run this command ON YOUR LOCAL COMPUTER:**
+**I fixed the Node version issue. Now YOU need to copy the files:**
+
 ```bash
-node copy-and-fix.js && git add . && git commit -m "Add UI components" && git push
+git pull && node copy-and-fix.js && git add . && git commit -m "Add UI components" && git push
 ```
 
 ⚠️ **Important:** This must run on your laptop/desktop, not on GitHub!
 
-📖 **Step-by-step guide:** `/RUN_LOCALLY_FIRST.md` ⭐
+📖 **Step-by-step guide:** `/ACTION_REQUIRED.md` ⭐⭐⭐
 
 ### ✅ After Build Succeeds
 

@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "description": "Westprint printing company website",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
