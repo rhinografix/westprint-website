@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function HeroAnimationOverlay() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

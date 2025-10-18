@@ -2,9 +2,20 @@
 
 Professional printing company website for Westprint - Serving Southern California since 1981.
 
-## 🚀 Quick Deploy to Netlify
+## 🚀 Deploy to Netlify
 
-**Ready to deploy?** Read `/DEPLOY.md` for complete step-by-step instructions!
+### 🚨 Build Failed? Fix It Now!
+
+**Run this command:**
+```bash
+node fix-imports.js && git add . && git commit -m "Fix imports" && git push
+```
+
+**OR Read:** `/FIX_NOW.md` ⭐ (Multiple fix options)
+
+### ✅ After Build Succeeds
+
+**Read:** `/DEPLOY.md` for domain setup instructions!
 
 Your site will be live at westprint.com in ~20 minutes.
 
