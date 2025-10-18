@@ -1,8 +1,8 @@
 # 🎯 START HERE - Westprint Website Deployment
 
-## 🚨 BUILD FAILED - QUICK FIX NEEDED!
+## 🚨 BUILD FAILED - MISSING FILES!
 
-Your Netlify build failed because imports have version specifiers (like `@1.2.3`).
+Your `/src/components/ui/` folder only has 3 files but needs all 49!
 
 **Fix Time:** 30 seconds!
 
@@ -13,15 +13,12 @@ Your Netlify build failed because imports have version specifiers (like `@1.2.3`
 ### Run ONE Command:
 
 ```bash
-node fix-imports.js
-git add .
-git commit -m "Fix import version specifiers"
-git push
+node copy-and-fix.js && git add . && git commit -m "Add all UI components" && git push
 ```
 
 **That's it!** Netlify will rebuild in ~3 minutes! ✅
 
-📖 **Full Instructions:** `/FIX_NOW.md` ⭐
+📖 **Full Instructions:** `/ULTIMATE_FIX.md` ⭐
 
 ---
 

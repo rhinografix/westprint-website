@@ -8,10 +8,10 @@ Professional printing company website for Westprint - Serving Southern Californi
 
 **Run this command:**
 ```bash
-node fix-imports.js && git add . && git commit -m "Fix imports" && git push
+node copy-and-fix.js && git add . && git commit -m "Add UI components" && git push
 ```
 
-**OR Read:** `/FIX_NOW.md` ⭐ (Multiple fix options)
+**OR Read:** `/ULTIMATE_FIX.md` ⭐ (Detailed instructions)
 
 ### ✅ After Build Succeeds
 
