@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import westprintSignImage from 'figma:asset/42c8025b1c3e4cb6e6363a21e709f758ae711ac7.png';
-import { Target, Handshake, Rocket, Users, Palette, Wrench, Factory, Trophy, Star, Leaf, Award, Clock } from 'lucide-react';
+import { Target, Handshake, Rocket, Users, Palette, Wrench, Factory, Trophy, Star, Leaf, Clock } from 'lucide-react';
 
-const facilityImage = "https://images.unsplash.com/photo-1729944950511-e9c71556cfd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmludGluZyUyMGZhY2lsaXR5JTIwZXF1aXBtZW50fGVufDF8fHx8MTc2MDY3Nzg1OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
+// Using a professional image URL for the Westprint sign
+const westprintSignImage = "https://advantageinc-ca.com/uploads/westprint-bg2.jpg";
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;

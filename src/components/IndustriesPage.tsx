@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { Activity, Home, Briefcase, Scale, GraduationCap, Heart, Factory, ShoppingBag, Monitor, Lock, Zap, Gem } from 'lucide-react';

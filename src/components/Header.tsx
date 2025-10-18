@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from 'figma:asset/fcb7f2317bb54ddde4974ba13fc628b2eea0c16c.png';
 
 interface HeaderProps {
   onNavigate: (page: string) => void;
@@ -34,7 +33,7 @@ export default function Header({ onNavigate }: HeaderProps) {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <button onClick={() => onNavigate('home')} className="flex items-center">
-              <img src={logo} alt="Westprint Logo" className="h-10 sm:h-12 w-auto" />
+              <img src="/logo-placeholder.svg" alt="Westprint Logo" className="h-10 sm:h-12 w-auto" />
             </button>
 
             {/* Desktop Navigation */}
@@ -120,11 +119,6 @@ export default function Header({ onNavigate }: HeaderProps) {
               >
                 CONTACT
               </button>
-              
-              <div className="mt-4 pt-4 border-t border-gray-200 px-4 space-y-2">
-                <p className="text-sm text-gray-600">📍 Anaheim, CA</p>
-                <p className="text-sm text-gray-600">📞 (949) 749-4024</p>
-              </div>
             </nav>
           </div>
         )}

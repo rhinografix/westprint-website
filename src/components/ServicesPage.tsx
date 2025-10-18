@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Printer, Palette, Package, Tag, Image, Gift, Monitor, Settings } from 'lucide-react';
+import { useEffect } from 'react';
+import { Mail, Printer, Palette, Package, Tag, Image, Gift, Monitor, Settings } from 'lucide-react';
 import Header from './Header';
 import Footer from './Footer';
-import heroBackground from 'figma:asset/e5c62ee4c3b2eb0b9341e12cc12987b133f98c71.png';
 
 interface ServicesPageProps {
   onNavigate: (page: string) => void;
@@ -20,18 +19,12 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
       <main>
         {/* Hero Section */}
         <section 
-          className="text-white py-20 relative"
-          style={{
-            backgroundImage: `url(${heroBackground})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
+          className="bg-gradient-to-br from-cyan-600 via-teal-600 to-cyan-700 text-white py-20 relative"
         >
           <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
             <div className="bg-white/20 backdrop-blur-xl p-8 md:p-12 border border-white/30 shadow-2xl mx-auto max-w-4xl rounded-2xl">
-              <h1 className="text-5xl mb-6 text-gray-900">Our Services</h1>
-              <p className="text-xl text-gray-800">
+              <h1 className="text-5xl mb-6 text-white">Our Services</h1>
+              <p className="text-xl text-white">
                 Comprehensive printing solutions designed to meet all your business needs. From concept to completion, we deliver exceptional quality and service.
               </p>
             </div>
