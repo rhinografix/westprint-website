@@ -6,12 +6,14 @@ Professional printing company website for Westprint - Serving Southern Californi
 
 ### 🚨 Build Failed? Fix It Now!
 
-**Run this command:**
+**Run this command ON YOUR LOCAL COMPUTER:**
 ```bash
 node copy-and-fix.js && git add . && git commit -m "Add UI components" && git push
 ```
 
-**OR Read:** `/ULTIMATE_FIX.md` ⭐ (Detailed instructions)
+⚠️ **Important:** This must run on your laptop/desktop, not on GitHub!
+
+📖 **Step-by-step guide:** `/RUN_LOCALLY_FIRST.md` ⭐
 
 ### ✅ After Build Succeeds
 
