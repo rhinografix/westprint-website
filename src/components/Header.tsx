@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
+const logo = 'https://advantageinc-ca.com/uploads/Pic.png';
+
 interface HeaderProps {
   onNavigate: (page: string) => void;
 }
@@ -33,7 +35,7 @@ export default function Header({ onNavigate }: HeaderProps) {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <button onClick={() => onNavigate('home')} className="flex items-center">
-              <img src="/logo-placeholder.svg" alt="Westprint Logo" className="h-10 sm:h-12 w-auto" />
+              <img src={logo} alt="Westprint Logo" className="h-10 sm:h-12 w-auto" />
             </button>
 
             {/* Desktop Navigation */}

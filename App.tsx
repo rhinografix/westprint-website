@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { Phone, Mail, MapPin, Clock, Check, Award, Users, Shield, TrendingUp, DollarSign } from 'lucide-react';
-import logo from 'figma:asset/fcb7f2317bb54ddde4974ba13fc628b2eea0c16c.png';
 import ServicesPage from './components/ServicesPage';
 import IndustriesPage from './components/IndustriesPage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
-import heroBackgroundImage from 'figma:asset/6dd79b988793c6233bafb2c67e4749bef9ca27d8.png';
+const heroBackgroundImage = 'https://advantageinc-ca.com/uploads/westprint-bg1.jpg';
 import HeroAnimationOverlay from './components/HeroAnimationOverlay';
 import ScrollControlledFeatures from './components/ScrollControlledFeatures';
 import Header from './components/Header';

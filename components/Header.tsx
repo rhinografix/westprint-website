@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from 'figma:asset/fcb7f2317bb54ddde4974ba13fc628b2eea0c16c.png';
+
+const logo = 'https://advantageinc-ca.com/uploads/Pic.png';
 
 interface HeaderProps {
   onNavigate: (page: string) => void;

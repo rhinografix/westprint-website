@@ -11,6 +11,8 @@ import Header from './components/Header';
 import { toast } from 'sonner';
 import { Toaster } from './components/ui/sonner';
 
+const heroBackgroundImage = 'https://advantageinc-ca.com/uploads/westprint-bg1.jpg';
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -167,7 +169,13 @@ export default function App() {
       <main>
         {/* Hero Section */}
         <section 
-          className="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-br from-cyan-600 via-teal-600 to-cyan-700"
+          className="relative py-20 lg:py-28 overflow-hidden"
+          style={{
+            backgroundImage: `url(${heroBackgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
         >
           {/* Animated Overlay */}
           <HeroAnimationOverlay />
