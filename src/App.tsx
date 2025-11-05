@@ -5,6 +5,7 @@ import ServicesPage from './components/ServicesPage';
 import IndustriesPage from './components/IndustriesPage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
+import FormTestingDashboard from './components/FormTestingDashboard';
 import HeroAnimationOverlay from './components/HeroAnimationOverlay';
 import ScrollControlledFeatures from './components/ScrollControlledFeatures';
 import Header from './components/Header';
@@ -14,7 +15,10 @@ import { Toaster } from './components/ui/sonner';
 const heroBackgroundImage = 'https://advantageinc-ca.com/uploads/westprint-bg1.jpg';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  // Check URL parameters for page navigation (e.g., ?page=test-forms)
+  const urlParams = new URLSearchParams(window.location.search);
+  const pageParam = urlParams.get('page');
+  const [currentPage, setCurrentPage] = useState(pageParam || 'home');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -22,7 +26,9 @@ export default function App() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
+    // Store form reference before async operations
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const data = {
       fullName: formData.get('fullName') as string,
       email: formData.get('email') as string,
@@ -47,7 +53,10 @@ export default function App() {
 
       if (response.ok && result.success) {
         setSubmitStatus('success');
-        e.currentTarget.reset();
+        // Reset form safely
+        if (form) {
+          form.reset();
+        }
         toast.success('Quote request sent!', {
           description: 'We\'ll get back to you within 24 hours.',
         });
@@ -115,6 +124,11 @@ export default function App() {
         <Toaster position="top-right" richColors />
       </>
     );
+  }
+
+  // If form testing dashboard is active, render it
+  if (currentPage === 'test-forms') {
+    return <FormTestingDashboard />;
   }
 
   const services = [

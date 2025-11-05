@@ -21,7 +21,9 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
+    // Store form reference before async operations
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const data = {
       firstName: formData.get('firstName') as string,
       lastName: formData.get('lastName') as string,
@@ -51,7 +53,10 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
 
       if (response.ok && result.success) {
         setSubmitStatus('success');
-        e.currentTarget.reset();
+        // Reset form safely
+        if (form) {
+          form.reset();
+        }
         toast.success('Quote request sent!', {
           description: 'We\'ll get back to you within 24 hours.',
         });
