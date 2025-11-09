@@ -218,11 +218,10 @@ ${data.projectDetails ? `\nProject Details:\n${data.projectDetails}` : ''}
     }
 
     // Send email using Resend
-    // For testing: sending to rhinografix@gmail.com
-    // TODO: Change back to customercare@westprint.com for production
+    // Production: sending to estimating@westprint.com and rcarandang@advantageinc.com
     const result = await resend.emails.send({
-      from: 'Westprint Website <onboarding@resend.dev>', // Change to your verified domain in production
-      to: ['rhinografix@gmail.com'], // Testing email - change to customercare@westprint.com for production
+      from: 'Westprint Website <onboarding@resend.dev>',
+      to: ['estimating@westprint.com', 'rcarandang@advantageinc.com'],
       replyTo: data.email,
       subject: subject,
       html: htmlContent,

@@ -1,193 +1,224 @@
 # Westprint Website
 
-Professional printing company website for Westprint - Serving Southern California since 1981.
+Modern, responsive website for Westprint - a professional printing company established in 1981, serving Southern California from their Anaheim location.
 
-## 🚀 Quick Deploy
+## 🌟 Features
 
-```bash
-# Push to GitHub
-git add .
-git commit -m "Fix: react-hook-form import + Node v20.11.1"
-git push
-```
+- **Responsive Design** - Optimized for desktop, tablet, and mobile devices
+- **Professional Quote Forms** - Two forms with email integration via Resend API
+  - Quick quote form in hero section (4 fields)
+  - Detailed quote request form on contact page (9 fields)
+- **Service Showcase** - Comprehensive printing services display
+- **Industry Solutions** - Targeted information for different business sectors
+- **Smooth Animations** - Professional transitions and hover effects
+- **Modern UI** - Clean design with teal/cyan gradient branding
 
-The site will automatically build and deploy on Netlify!
+## 📦 Tech Stack
 
-## 📋 Project Overview
+- **Framework**: React 18 + TypeScript
+- **Styling**: Tailwind CSS v4
+- **Build Tool**: Vite
+- **UI Components**: Radix UI + shadcn/ui
+- **Icons**: Lucide React
+- **Notifications**: Sonner (toast)
+- **Backend**: Supabase Edge Functions
+- **Email Service**: Resend API
+- **Deployment**: Netlify
 
-- **Tech Stack:** React + TypeScript + Vite + Tailwind CSS v4
-- **Hosting:** Netlify
-- **Backend:** Supabase Edge Functions (contact form)
-- **Domain:** westprint.com
-- **Node Version:** 20.11.1 LTS
+## 🚀 Quick Start
 
-## ✨ Features
+### Prerequisites
 
-- ✅ Responsive design (mobile & desktop)
-- ✅ Professional teal/blue gradient color scheme
-- ✅ Working contact form with email notifications
-- ✅ Multiple pages (Home, Services, Industries, About, Contact)
-- ✅ Smooth animations and hover effects
-- ✅ SEO optimized
-- ✅ Fast loading with Vite
-- ✅ TypeScript for type safety
-- ✅ ShadCN UI components
+- Node.js 20.11.1 or higher
+- npm or yarn
 
-## 🏗️ Project Structure
-
-```
-westprint-website/
-├── src/
-│   ├── main.tsx              # Entry point
-│   ├── App.tsx               # Main app component
-│   ├── components/           # All React components
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   ├── AboutPage.tsx
-│   │   ├── ContactPage.tsx
-│   │   ├── ServicesPage.tsx
-│   │   ├── IndustriesPage.tsx
-│   │   ├── HeroAnimationOverlay.tsx
-│   │   ├── ScrollControlledFeatures.tsx
-│   │   ├── figma/
-│   │   │   └── ImageWithFallback.tsx
-│   │   └── ui/               # ShadCN components
-│   ├── styles/
-│   │   └── globals.css       # Global styles (Tailwind v4)
-│   └── utils/
-│       └── supabase/
-│           └── info.tsx      # Supabase config
-├── public/
-│   └── logo-placeholder.svg  # Logo
-├── supabase/
-│   └── functions/server/     # Edge function for contact form
-├── index.html
-├── package.json
-├── vite.config.ts
-├── tsconfig.json
-└── netlify.toml              # Netlify configuration
-```
-
-## 💻 Local Development
+### Installation
 
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+cd westprint-website
+
 # Install dependencies
 npm install
 
-# Start dev server
+# Start development server
 npm run dev
+```
 
-# Build for production
+The site will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+# Build the project
 npm run build
 
 # Preview production build
 npm run preview
-
-# Type check
-npm run lint
 ```
 
-Visit `http://localhost:5173`
+## 📧 Email Configuration
+
+Quote request forms send emails to:
+- `estimating@westprint.com`
+- `rcarandang@advantageinc.com`
+
+Email integration is handled via Resend API through Supabase Edge Functions.
+
+### Testing Forms
+
+Access the form testing dashboard:
+```
+http://localhost:5173/?page=test-forms
+```
+
+This dashboard allows you to:
+- Test both quote request forms
+- View real-time success/error status
+- Monitor email delivery
+- Debug form submissions
 
 ## 🌐 Deployment
 
-### Netlify (Current Setup)
+### Netlify Deployment
 
-The site is configured to automatically deploy when you push to GitHub:
+1. **Connect GitHub Repository**
+   - Login to [Netlify](https://netlify.com)
+   - Click "Add new site" → "Import an existing project"
+   - Connect to GitHub and select this repository
 
-1. **Push to GitHub:**
-   ```bash
-   git add .
-   git commit -m "Your changes"
-   git push
-   ```
-
-2. **Netlify Auto-Deploys:**
-   - Watches your `main` branch
-   - Builds with: `npm run build`
-   - Publishes from: `dist/`
+2. **Configure Build Settings**
+   - Build command: `npm run build`
+   - Publish directory: `dist`
    - Node version: 20.11.1
 
-3. **Domain Setup:**
-   - Site: `westprint.com`
-   - SSL: Automatic (Let's Encrypt)
+3. **Deploy**
+   - Click "Deploy site"
+   - Netlify will automatically build and deploy
 
-### Environment Variables
+### Manual Deployment
 
-These are already configured in Netlify:
-- `SUPABASE_URL`
-- `SUPABASE_ANON_KEY`
-- `SUPABASE_SERVICE_ROLE_KEY`
-- `RESEND_API_KEY`
+```bash
+# Install Netlify CLI
+npm install -g netlify-cli
 
-## 📧 Contact Form
+# Login to Netlify
+netlify login
 
-- Sends emails to: **rhinografix@gmail.com**
-- Powered by: Supabase Edge Functions + Resend API
-- Includes: Name, email, phone, service, and message
-
-## 🎨 Customization
-
-### Update Logo
-
-Replace `/public/logo-placeholder.svg` with your logo file.
-
-### Update Colors
-
-Edit `/src/styles/globals.css` - Tailwind v4 uses CSS variables:
-
-```css
-@theme {
-  --color-primary: /* your color */;
-}
+# Deploy to production
+netlify deploy --prod
 ```
 
-### Update Contact Info
+### Custom Domain Setup
 
-Edit `/src/components/Footer.tsx` and `/src/components/Header.tsx`
+1. In Netlify dashboard, go to "Domain settings"
+2. Add custom domain: `westprint.com`
+3. Configure DNS records as instructed
+4. Enable HTTPS (automatic)
+
+## 📂 Project Structure
+
+```
+westprint-website/
+├── src/
+│   ├── components/        # React components
+│   │   ├── ui/           # shadcn/ui components
+│   │   ├── AboutPage.tsx
+│   │   ├── ContactPage.tsx
+│   │   ├── FormTestingDashboard.tsx
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── ...
+│   ├── styles/           # Global styles
+│   ├── utils/            # Utility functions
+│   ├── App.tsx           # Main app component
+│   └── main.tsx          # App entry point
+├── supabase/
+│   └── functions/
+│       └── server/       # Edge functions
+│           └── index.tsx # Email API endpoint
+├── public/               # Static assets
+├── netlify.toml          # Netlify configuration
+├── package.json          # Dependencies
+├── tsconfig.json         # TypeScript config
+└── vite.config.ts        # Vite configuration
+```
+
+## 🎨 Pages
+
+- **Home** (`/`) - Hero section with quote form, features, testimonials
+- **Services** (`/?page=services`) - Comprehensive service listings
+- **Industries** (`/?page=industries`) - Industry-specific solutions
+- **About** (`/?page=about`) - Company history and information
+- **Contact** (`/?page=contact`) - Detailed quote request form
+- **Form Testing** (`/?page=test-forms`) - Testing dashboard
+
+## 🔧 Configuration Files
+
+- **netlify.toml** - Netlify deployment and redirect configuration
+- **tsconfig.json** - TypeScript compiler options
+- **vite.config.ts** - Vite build configuration
+- **postcss.config.js** - PostCSS and Tailwind configuration
+
+## 🧪 Testing
+
+### Form Testing Dashboard
+
+The project includes a comprehensive testing dashboard for validating email forms:
+
+```bash
+# Start dev server
+npm run dev
+
+# Navigate to testing dashboard
+http://localhost:5173/?page=test-forms
+```
+
+Features:
+- Test hero form with sample data
+- Test contact form with sample data
+- View request/response details
+- Monitor email delivery status
+- Debug form issues
+
+## 🛠️ Development
+
+### Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Type-check with TypeScript
+```
+
+### Adding New Pages
+
+1. Create new component in `src/components/`
+2. Import in `src/App.tsx`
+3. Add navigation link in `Header.tsx`
+4. Update page routing in `App.tsx`
+
+### Modifying Styles
+
+Global styles are in `src/styles/globals.css` using Tailwind CSS v4.
 
 ## 📞 Contact Information
 
-- **Address:** 1600 N Kraemer Blvd, Anaheim, CA 92806
-- **Phone:** (949) 749-4024
-- **Email:** customercare@westprint.com
-- **Hours:** Mon-Fri 8:00 AM - 5:00 PM
-- **File Upload:** https://westprint.wetransfer.com/
+**Westprint**
+- Phone: (949) 749-4024
+- Email: estimating@westprint.com
+- Location: Anaheim, Southern California
+- Hours: Monday - Friday, 8:00 AM - 5:00 PM
+- Website: westprint.com
 
-## 🔧 Build Configuration
+## 📝 License
 
-- **Build Command:** `npm run build`
-- **Build Steps:**
-  1. TypeScript compilation (`tsc`)
-  2. Vite production build
-  3. Output to `dist/`
+© 2024 Westprint. All rights reserved.
 
-- **Node Version:** 20.11.1 (specified in `netlify.toml`, `package.json`, `.nvmrc`, `.node-version`)
+## 🤝 Support
 
-## 📚 Tech Stack Details
+For technical issues or questions about the website, please contact the development team.
 
-- **React 18.2** - UI framework
-- **TypeScript 5.3** - Type safety
-- **Vite 5** - Build tool & dev server
-- **Tailwind CSS v4** - Styling
-- **ShadCN UI** - Component library
-- **Lucide React** - Icons
-- **Sonner** - Toast notifications
-- **Radix UI** - Accessible primitives
-- **Supabase** - Backend & database
-- **Resend** - Email API
-
-## 📄 License
-
-© 2025 Westprint. All rights reserved.
-
-## 🆘 Support
-
-- **Netlify Docs:** https://docs.netlify.com
-- **Vite Docs:** https://vite.dev
-- **React Docs:** https://react.dev
-- **Tailwind v4:** https://tailwindcss.com/docs/v4-beta
-
----
-
-**Status:** ✅ Ready for production deployment
+For printing services and quotes, contact Westprint directly at (949) 749-4024.
