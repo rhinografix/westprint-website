@@ -215,7 +215,7 @@ Global styles are in `src/styles/globals.css` using Tailwind CSS v4.
 
 ## 📝 License
 
-© 2024 Westprint. All rights reserved.
+© 2025 Westprint. All rights reserved.
 
 ## 🤝 Support
 

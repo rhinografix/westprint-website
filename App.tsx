@@ -654,7 +654,7 @@ export default function App() {
                   trigger-based direct mail campaigns that are
                   equally as impactful as your digital
                   advertising initiatives. For additional
-                  details, kindly contact us or complete our
+                   details, kindly contact us or complete our
                   contact form, and we will promptly respond to
                   your inquiry.
                 </p>
@@ -837,7 +837,7 @@ export default function App() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Westprint. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Westprint. All rights reserved.</p>
           </div>
         </div>
       </footer>

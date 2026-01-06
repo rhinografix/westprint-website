@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>© 2026 The content on this website is owned by us and our licensors. Do not copy any content (including images) without our consent.</p>
+          <p>© 2025 The content on this website is owned by us and our licensors. Do not copy any content (including images) without our consent.</p>
         </div>
       </div>
     </footer>
